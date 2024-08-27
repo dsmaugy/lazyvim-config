@@ -12,7 +12,7 @@ return {
       vim.api.nvim_create_user_command("PeekOpen", require("peek").open, {})
       vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
       -- vim.keymap.del("n", "<leader>cp")
-      vim.keymap.set("n", "<leader>cP", require("peek").open, { buffer = buffer, desc = "Open Markdown Preview" })
+      -- vim.keymap.set("n", "<leader>cP", require("peek").open, { buffer = buffer, desc = "Open Markdown Preview" })
     end,
   },
 }

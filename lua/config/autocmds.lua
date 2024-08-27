@@ -17,3 +17,12 @@
 --     io.write("\027]111\027\\")
 --   end,
 -- })
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "markdown",
+  callback = function(event)
+    if vim.bo[event.buf].filetype == "markdown" then
+      vim.keymap.set("n", "<leader>cP", require("peek").open, { buffer = buffer, desc = "Open Markdown Preview" })
+    end
+  end,
+})
