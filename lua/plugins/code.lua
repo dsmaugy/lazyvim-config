@@ -1,6 +1,7 @@
 return {
-  { "iamcco/markdown-preview.nvim", enabled = "false" },
 
+  -- Markdown Setup
+  { "iamcco/markdown-preview.nvim", enabled = "false" },
   {
     "toppair/peek.nvim",
     event = { "VeryLazy" },
@@ -11,8 +12,16 @@ return {
       })
       vim.api.nvim_create_user_command("PeekOpen", require("peek").open, {})
       vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
-      -- vim.keymap.del("n", "<leader>cp")
-      -- vim.keymap.set("n", "<leader>cP", require("peek").open, { buffer = buffer, desc = "Open Markdown Preview" })
     end,
+  },
+
+  -- LSP / Color Formatting / Linting
+  {
+    "williamboman/mason.nvim",
+    opts = { ensure_installed = { "actionlint", "glsl_analyzer" } },
+  },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = { ensure_installed = { "glsl" } },
   },
 }
