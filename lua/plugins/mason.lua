@@ -2,7 +2,7 @@ return {
   {
     "williamboman/mason.nvim",
     -- optional = true,
-    opts = { ensure_installed = { "actionlint" } },
+    opts = { ensure_installed = { "actionlint", "glsl_analyzer" } },
     -- opts = function(_, opts)
     --   if type(opts.ensure_installed) == "table" then
     --     vim.list_extend(
