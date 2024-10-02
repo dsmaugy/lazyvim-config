@@ -26,6 +26,15 @@ return {
     config = function()
       local telescope = require("telescope")
 
+      telescope.setup({
+        pickers = {
+          find_files = {
+            hidden = true,
+            no_ignore = false,
+          },
+        },
+      })
+
       -- then load the extension
       telescope.load_extension("live_grep_args")
       vim.keymap.set("n", "<leader>fg", ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>")
