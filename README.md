@@ -1,3 +1,6 @@
+# archived!!
+**this is now managed by my [dotfiles repo](https://github.com/dsmaugy/dotfiles) and chezmoi**
+
 # 💤 LazyVim
 
 my lazyvim setup 👻
